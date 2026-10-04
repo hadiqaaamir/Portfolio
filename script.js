@@ -21,3 +21,22 @@ const revealObserver = new IntersectionObserver(
 );
 
 revealItems.forEach((item) => revealObserver.observe(item));
+
+// A restrained cursor-follow effect adds depth without obscuring the work.
+const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+if (canHover) {
+  document.querySelectorAll(".project-visual").forEach((visual) => {
+    visual.addEventListener("pointermove", (event) => {
+      const bounds = visual.getBoundingClientRect();
+      const x = ((event.clientX - bounds.left) / bounds.width - 0.5) * 10;
+      const y = ((event.clientY - bounds.top) / bounds.height - 0.5) * 10;
+      visual.style.setProperty("--parallax-x", `${x}px`);
+      visual.style.setProperty("--parallax-y", `${y}px`);
+    });
+
+    visual.addEventListener("pointerleave", () => {
+      visual.style.setProperty("--parallax-x", "0px");
+      visual.style.setProperty("--parallax-y", "0px");
+    });
+  });
+}
