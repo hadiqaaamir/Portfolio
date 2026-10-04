@@ -57,6 +57,41 @@
 .case-next a { display: flex; justify-content: space-between; text-decoration: none; font-family: "Manrope", sans-serif; font-size: clamp(2rem, 4vw, 4rem); letter-spacing: -.04em; }
 .case-next a span { color: var(--muted); font-size: 1rem; letter-spacing: 0; }
 
+/* Designing from behaviour */
+.analytics-cover { background: #d6d9ff; }
+.analytics-dashboard { min-height: 610px; border-radius: 1.25rem 1.25rem 0 0; overflow: hidden; background: #fbfaf7; box-shadow: 0 30px 90px rgba(35, 37, 79, .17); }
+.analytics-topbar { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 1.5rem; border-bottom: 1px solid #e1e1e7; }
+.analytics-topbar strong { font-family: "Manrope", sans-serif; font-size: .92rem; }
+.analytics-topbar span { color: #696b78; font-size: .76rem; }
+.analytics-dashboard-body { display: grid; grid-template-columns: 180px 1fr; min-height: 545px; }
+.analytics-nav { padding: 1.5rem 1.1rem; border-right: 1px solid #e1e1e7; background: #f1f0f5; }
+.analytics-nav i { display: block; width: 72%; height: .55rem; margin: .45rem 0 1.4rem; border-radius: 1rem; background: #c9c9d2; }
+.analytics-nav i:first-child { width: 88%; background: #7771e8; }
+.analytics-content { padding: 2rem; }
+.analytics-content > p { margin: 0 0 1.75rem; color: #626472; font-size: .8rem; }
+.analytics-stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.analytics-stat { padding: 1.25rem; border: 1px solid #e1e1e7; border-radius: .9rem; background: white; }
+.analytics-stat small { display: block; color: #777985; }
+.analytics-stat b { display: block; margin-top: 1rem; font: 600 1rem "Manrope", sans-serif; }
+.analytics-panels { display: grid; grid-template-columns: 1.5fr .8fr; gap: 1rem; margin-top: 1rem; }
+.analytics-chart-card, .analytics-insight-card { min-height: 255px; padding: 1.4rem; border: 1px solid #e1e1e7; border-radius: .9rem; background: white; }
+.analytics-chart-card strong, .analytics-insight-card strong { font-size: .85rem; }
+.analytics-bars { height: 150px; display: flex; align-items: end; gap: .75rem; margin-top: 1.6rem; border-bottom: 1px solid #d7d7dd; }
+.analytics-bars i { flex: 1; height: var(--bar); border-radius: .35rem .35rem 0 0; background: #7771e8; opacity: calc(.45 + var(--bar-number, .2)); }
+.analytics-insight-card span { display: block; margin-top: 2rem; color: #7771e8; font: 600 1.2rem "Manrope", sans-serif; }
+.analytics-insight-card p { color: #696b78; font-size: .83rem; line-height: 1.55; }
+.signal-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; margin-top: 4rem; border: 1px solid var(--line); background: var(--line); }
+.signal-grid article { min-height: 220px; padding: 2rem; background: var(--paper); }
+.signal-grid span { color: #6861dd; font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }
+.signal-grid h3 { margin: 2.6rem 0 .75rem; font-size: 1.45rem; }
+.signal-grid p { margin: 0; color: var(--muted); line-height: 1.6; }
+.hypothesis-loop { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin-top: 4rem; border: 1px solid var(--line); background: var(--line); }
+.hypothesis-loop article { min-height: 250px; padding: 1.75rem; background: var(--paper); }
+.hypothesis-loop article:nth-child(2) { background: #7771e8; color: white; }
+.hypothesis-loop span { display: block; margin-bottom: 4.5rem; font-size: .75rem; opacity: .65; }
+.hypothesis-loop h3 { margin: 0 0 .7rem; font-size: 1.25rem; }
+.hypothesis-loop p { margin: 0; color: inherit; opacity: .72; line-height: 1.55; }
+
 @media (max-width: 780px) {
   .case-main { padding: 0 1rem; }
   .case-hero { min-height: 68vh; }
@@ -72,4 +107,10 @@
   .process-grid, .contribution-list { grid-template-columns: 1fr; }
   .workflow-map { grid-template-columns: 1fr; }
   .workflow-map > b { transform: rotate(90deg); justify-self: center; }
+  .analytics-dashboard-body { grid-template-columns: 1fr; }
+  .analytics-nav { display: none; }
+  .analytics-content { padding: 1rem; }
+  .analytics-stat-row { grid-template-columns: 1fr; }
+  .analytics-panels { grid-template-columns: 1fr; }
+  .signal-grid, .hypothesis-loop { grid-template-columns: 1fr; }
 }
