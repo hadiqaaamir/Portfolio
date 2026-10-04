@@ -41,11 +41,11 @@ nav a:hover::after, nav a:focus-visible::after,
 .text-link:hover::after, .text-link:focus-visible::after { right: 0; }
 
 main { padding: 0 2rem; }
-.hero { min-height: 82vh; display: grid; align-content: space-between; padding: 3rem 0 4rem; }
+.hero { min-height: 70vh; display: grid; align-content: space-between; padding: 3rem 0 3rem; }
 .eyebrow { margin: 0 0 1.25rem; color: var(--muted); font-size: .82rem; text-transform: uppercase; letter-spacing: .12em; }
 h1, h2, h3 { margin: 0; font-weight: 400; }
 h1, h2, h3 { font-family: "Manrope", sans-serif; }
-h1 { max-width: 1180px; font-size: clamp(3.25rem, 8vw, 8.2rem); font-weight: 500; line-height: .94; letter-spacing: -.062em; }
+h1 { max-width: 980px; font-size: clamp(2.7rem, 5.8vw, 4.75rem); font-weight: 500; line-height: 1.02; letter-spacing: -.052em; }
 h1 span { color: var(--blue); }
 .hero-notes { display: grid; grid-template-columns: minmax(240px, 520px) auto; gap: 4rem; align-items: end; }
 .hero-notes p { margin: 0; font-size: clamp(1.05rem, 1.6vw, 1.4rem); line-height: 1.5; }
@@ -130,7 +130,7 @@ footer p { margin: 0; } footer p:nth-child(2) { text-align: center; } footer p:l
 @media (max-width: 760px) {
   .site-header, main, footer { padding-left: 1rem; padding-right: 1rem; }
   nav { gap: .9rem; font-size: .9rem; }
-  .hero { min-height: 74vh; padding-top: 2rem; }
+  .hero { min-height: 64vh; padding-top: 2rem; }
   .hero-notes, .section-heading, .visual-practice, .about { grid-template-columns: 1fr; }
   .hero-notes { gap: 1.5rem; }
   .work, .visual-practice, .about { padding: 4rem 0; }
