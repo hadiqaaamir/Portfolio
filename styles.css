@@ -155,7 +155,7 @@ footer p { margin: 0; } footer p:nth-child(2) { text-align: center; } footer p:l
 .motion-ready [data-reveal].is-visible { opacity: 1; transform: translateY(0); }
 .motion-ready .project-grid .project:nth-child(2) { transition-delay: .08s; }
 .motion-ready .project-grid .project:nth-child(3) { transition-delay: .16s; }
-.motion-ready .hero-pill {
+.motion-ready.pills-playing .hero-pill {
   animation: pill-fall 1.25s cubic-bezier(.22,.72,.2,1) both;
   animation-delay: var(--delay);
   transform-origin: center;

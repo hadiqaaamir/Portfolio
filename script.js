@@ -8,6 +8,19 @@ window.addEventListener(
 
 document.documentElement.classList.add("motion-ready");
 
+const replayHeroPills = () => {
+  if (!document.querySelector(".hero-pill")) return;
+  document.documentElement.classList.remove("pills-playing");
+  // Reading layout resets the completed keyframes before replaying them.
+  void document.documentElement.offsetWidth;
+  requestAnimationFrame(() => document.documentElement.classList.add("pills-playing"));
+};
+
+window.addEventListener("pageshow", replayHeroPills);
+document.querySelector(".wordmark")?.addEventListener("click", () => {
+  window.setTimeout(replayHeroPills, 80);
+});
+
 const revealItems = document.querySelectorAll("[data-reveal]");
 const revealObserver = new IntersectionObserver(
   (entries, observer) => {
