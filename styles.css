@@ -64,13 +64,14 @@ h1 span { color: var(--blue); }
 .hero-current { margin: 2rem 0 0; color: var(--muted); font-size: 1rem; line-height: 1.55; }
 .hero-current strong { color: #4a4b48; }
 
-.hero-pill-field { position: absolute; left: -2rem; right: -2rem; bottom: 0; height: 175px; overflow: hidden; border-bottom: 1px solid var(--line); }
+.hero-pill-field { position: absolute; left: -2rem; right: -2rem; bottom: 0; height: 175px; overflow: visible; border-bottom: 1px solid var(--line); pointer-events: none; }
 .hero-pill {
   position: absolute; left: var(--x); bottom: var(--bottom); display: grid; place-items: center;
   min-width: 170px; padding: .9rem 1.25rem; border: 1px solid rgba(21,22,21,.16); border-radius: 999px;
   font: 500 .76rem "Manrope", sans-serif; letter-spacing: .055em; text-transform: uppercase;
   transform: rotate(var(--r)); box-shadow: 0 8px 18px rgba(21,22,21,.06);
   transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease;
+  pointer-events: auto;
 }
 .hero-pill:hover { transform: translateY(-12px) rotate(calc(var(--r) * -1)); box-shadow: 0 18px 30px rgba(21,22,21,.12); }
 .hero-pill.pill-mini { min-width: 3.7rem; width: 3.7rem; height: 3.3rem; padding: 0; }
@@ -154,16 +155,23 @@ footer p { margin: 0; } footer p:nth-child(2) { text-align: center; } footer p:l
 .motion-ready [data-reveal].is-visible { opacity: 1; transform: translateY(0); }
 .motion-ready .project-grid .project:nth-child(2) { transition-delay: .08s; }
 .motion-ready .project-grid .project:nth-child(3) { transition-delay: .16s; }
-.motion-ready .hero-pill { animation: pill-drop .78s cubic-bezier(.2,.85,.25,1.2) both; animation-delay: var(--delay); }
+.motion-ready .hero-pill {
+  animation: pill-fall 1.25s cubic-bezier(.22,.72,.2,1) both;
+  animation-delay: var(--delay);
+  transform-origin: center;
+}
 .hero > h1 span {
   background: linear-gradient(100deg, var(--blue) 15%, #6c4de7 48%, var(--blue) 82%);
   background-size: 200% 100%; background-clip: text; -webkit-background-clip: text;
   color: transparent; animation: accent-drift 8s ease-in-out infinite;
 }
 @keyframes accent-drift { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
-@keyframes pill-drop {
-  from { opacity: 0; transform: translateY(-115px) rotate(calc(var(--r) * -2)); }
-  to { opacity: 1; transform: translateY(0) rotate(var(--r)); }
+@keyframes pill-fall {
+  0% { opacity: 0; transform: translateY(calc(-100vh + 120px)) rotate(calc(var(--r) * -3)); }
+  15% { opacity: 1; }
+  76% { transform: translateY(8px) rotate(calc(var(--r) * .82)); }
+  88% { transform: translateY(-5px) rotate(calc(var(--r) * 1.08)); }
+  100% { opacity: 1; transform: translateY(0) rotate(var(--r)); }
 }
 
 @media (max-width: 760px) {
