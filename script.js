@@ -33,9 +33,62 @@ const hero = document.querySelector(".hero");
 let pillLayer = 10;
 
 if (pillField && hero) {
+  const pillDescription = document.createElement("div");
+  pillDescription.className = "pill-description";
+  pillDescription.setAttribute("role", "status");
+  pillDescription.setAttribute("aria-live", "polite");
+  hero.appendChild(pillDescription);
+  let descriptionTimer;
+
+  const showPillDescription = (pill) => {
+    const description = pill.dataset.description;
+    if (!description) return;
+
+    document.querySelectorAll(".hero-pill.has-description").forEach((activePill) => {
+      activePill.classList.remove("has-description");
+    });
+    pill.classList.add("has-description");
+    pillDescription.innerHTML = `<strong>${pill.textContent.trim()}</strong>${description}`;
+
+    const heroBounds = hero.getBoundingClientRect();
+    const pillBounds = pill.getBoundingClientRect();
+    const cardWidth = Math.min(310, window.innerWidth - 32);
+    const left = Math.min(
+      Math.max(16, pillBounds.left - heroBounds.left + pillBounds.width / 2 - cardWidth / 2),
+      heroBounds.width - cardWidth - 16,
+    );
+    let top = pillBounds.top - heroBounds.top - 112;
+    if (top < 16) top = pillBounds.bottom - heroBounds.top + 14;
+
+    pillDescription.style.left = `${left}px`;
+    pillDescription.style.top = `${top}px`;
+    pillDescription.classList.add("is-visible");
+
+    window.clearTimeout(descriptionTimer);
+    descriptionTimer = window.setTimeout(() => {
+      pillDescription.classList.remove("is-visible");
+      pill.classList.remove("has-description");
+    }, 4500);
+  };
+
   document.querySelectorAll(".hero-pill").forEach((pill) => {
+    if (pill.dataset.description) {
+      pill.tabIndex = 0;
+      pill.setAttribute("role", "button");
+      pill.setAttribute("aria-label", `${pill.textContent.trim()}: ${pill.dataset.description}`);
+
+      pill.addEventListener("click", () => showPillDescription(pill));
+      pill.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          showPillDescription(pill);
+        }
+      });
+    }
+
     pill.addEventListener("pointerdown", (event) => {
       event.preventDefault();
+      showPillDescription(pill);
       pill.setPointerCapture(event.pointerId);
 
       const fieldBounds = pillField.getBoundingClientRect();
@@ -62,6 +115,7 @@ if (pillField && hero) {
         );
         pill.style.left = `${nextLeft}px`;
         pill.style.top = `${nextTop}px`;
+        showPillDescription(pill);
       };
 
       const settleWithoutHidingLabels = () => {
