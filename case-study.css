@@ -57,6 +57,12 @@
 .case-next a { display: flex; justify-content: space-between; text-decoration: none; font-family: "Manrope", sans-serif; font-size: clamp(2rem, 4vw, 4rem); letter-spacing: -.04em; }
 .case-next a span { color: var(--muted); font-size: 1rem; letter-spacing: 0; }
 
+/* Three-part case-study rhythm: Problem → Process → Execution & Impact. */
+.process-detail { border-bottom-style: dashed; }
+.process-detail .eyebrow { color: var(--muted); }
+.execution-section { padding-bottom: 4rem; border-bottom: 0; }
+.execution-outcome { padding-top: 4rem; border-top: 1px solid var(--line); }
+
 /* Designing from behaviour */
 .analytics-cover { background: #d6d9ff; }
 .analytics-dashboard { min-height: 610px; border-radius: 1.25rem 1.25rem 0 0; overflow: hidden; background: #fbfaf7; box-shadow: 0 30px 90px rgba(35, 37, 79, .17); }
