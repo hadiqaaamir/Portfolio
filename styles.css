@@ -56,7 +56,7 @@ h1, h2, h3 { margin: 0; font-weight: 400; }
 h1, h2, h3 { font-family: "Manrope", sans-serif; }
 h1 { max-width: 980px; font-size: clamp(2.7rem, 5.8vw, 4.75rem); font-weight: 500; line-height: 1.02; letter-spacing: -.052em; }
 h1 span { color: var(--blue); }
-.hero-center { margin-top: -2rem; text-align: center; }
+.hero-center { margin-top: -5rem; text-align: center; }
 .hero-hello { display: flex; justify-content: center; align-items: center; gap: .55rem; margin: 0 0 1.4rem; color: var(--muted); }
 .hero-hello span { display: grid; place-items: center; width: 2.2rem; height: 2.2rem; border-radius: 50%; background: var(--ink); color: white; font-size: .68rem; font-weight: 600; }
 .hero-center h1 { max-width: 900px; font-family: "Instrument Serif", Georgia, serif; font-size: clamp(3.6rem, 6vw, 6.2rem); font-weight: 400; line-height: .98; letter-spacing: -.045em; }
@@ -64,11 +64,11 @@ h1 span { color: var(--blue); }
 .hero-current { margin: 2rem 0 0; color: var(--muted); font-size: 1rem; line-height: 1.55; }
 .hero-current strong { color: #4a4b48; }
 
-.hero-pill-field { position: absolute; left: -2rem; right: -2rem; bottom: 0; height: 175px; overflow: visible; border-bottom: 1px solid var(--line); pointer-events: none; }
+.hero-pill-field { position: absolute; left: -2rem; right: -2rem; bottom: 0; height: 225px; overflow: visible; border-bottom: 1px solid var(--line); pointer-events: none; }
 .hero-pill {
   position: absolute; left: var(--x); bottom: var(--bottom); display: grid; place-items: center;
-  min-width: 180px; padding: 1rem 1.35rem; border: 1px solid rgba(21,22,21,.2); border-radius: 999px;
-  font: 600 .79rem "Manrope", sans-serif; letter-spacing: .055em; text-transform: uppercase;
+  min-width: 195px; padding: 1.08rem 1.5rem; border: 1px solid rgba(21,22,21,.2); border-radius: 999px;
+  font: 600 .82rem "Manrope", sans-serif; letter-spacing: .055em; text-transform: uppercase;
   transform: rotate(var(--r)); box-shadow: 0 9px 20px rgba(21,22,21,.09);
   transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease;
   pointer-events: auto;
@@ -80,6 +80,8 @@ h1 span { color: var(--blue); }
 .pill-blue { background: #9acfff; }.pill-coral { background: #ff8759; }.pill-acid { background: #d8f98b; }
 .pill-lilac { background: #d9c9ff; }.pill-paper { background: #f7f7f5; }.pill-yellow { background: #ffd316; }
 .pill-green { background: #58d8a8; }.pill-pink { background: #ffc5e4; }
+.pill-sky { background: #a8dcff; }.pill-violet { background: #bcb2ff; }.pill-rose { background: #ffb0bc; }
+.pill-orange { background: #ffad69; }.pill-mint { background: #a9e4ce; }
 
 .work, .visual-practice, .about { border-top: 1px solid var(--line); padding: 6rem 0; }
 .section-heading { display: grid; grid-template-columns: 1fr 2fr; margin-bottom: 3rem; }
@@ -190,13 +192,13 @@ footer p { margin: 0; } footer p:nth-child(2) { text-align: center; } footer p:l
   .hero-notes, .section-heading, .visual-practice, .about { grid-template-columns: 1fr; }
   .hero-notes { gap: 1.5rem; }
   .work, .visual-practice, .about { padding: 4rem 0; }
-  .hero-pill-field { left: -1rem; right: -1rem; height: 165px; }
+  .hero-pill-field { left: -1rem; right: -1rem; height: 190px; }
   .hero-pill { min-width: 142px; padding: .75rem .9rem; font-size: .67rem; }
   .hero-pill:nth-child(1) { --x: 0% !important; bottom: 3.7rem; }
   .hero-pill:nth-child(2) { --x: 40% !important; bottom: 6rem; }
   .hero-pill:nth-child(3) { --x: 4% !important; bottom: .25rem; }
   .hero-pill:nth-child(4) { --x: 50% !important; bottom: 2.5rem; }
-  .hero-pill:nth-child(n+6) { display: none; }
+  .hero-pill:nth-child(n+7) { display: none; }
   .project { position: relative; top: auto !important; margin-bottom: 3rem; padding: .7rem; border-radius: 1.35rem; }
   .project-visual, .project-featured .project-visual { min-height: 380px; }
   .clinical-layout { min-height: 310px; }
