@@ -64,7 +64,52 @@ if (pillField && hero) {
         pill.style.top = `${nextTop}px`;
       };
 
+      const settleWithoutHidingLabels = () => {
+        const siblings = [...document.querySelectorAll(".hero-pill")].filter(
+          (other) => other !== pill,
+        );
+        const edgeOverlap = 12;
+
+        for (let pass = 0; pass < 12; pass += 1) {
+          let moved = false;
+          let left = Number.parseFloat(pill.style.left);
+          let top = Number.parseFloat(pill.style.top);
+          const width = pill.offsetWidth;
+          const height = pill.offsetHeight;
+
+          siblings.forEach((other) => {
+            const otherBounds = other.getBoundingClientRect();
+            const otherLeft = otherBounds.left - fieldBounds.left;
+            const otherTop = otherBounds.top - fieldBounds.top;
+            const overlapX = Math.min(left + width, otherLeft + otherBounds.width) - Math.max(left, otherLeft);
+            const overlapY = Math.min(top + height, otherTop + otherBounds.height) - Math.max(top, otherTop);
+
+            if (overlapX <= edgeOverlap || overlapY <= edgeOverlap) return;
+
+            const pillCenterX = left + width / 2;
+            const pillCenterY = top + height / 2;
+            const otherCenterX = otherLeft + otherBounds.width / 2;
+            const otherCenterY = otherTop + otherBounds.height / 2;
+
+            if (overlapX < overlapY) {
+              left += (pillCenterX < otherCenterX ? -1 : 1) * (overlapX - edgeOverlap);
+            } else {
+              top += (pillCenterY < otherCenterY ? -1 : 1) * (overlapY - edgeOverlap);
+            }
+
+            left = Math.min(Math.max(0, left), fieldBounds.width - width);
+            top = Math.min(Math.max(minTop, top), fieldBounds.height - height);
+            moved = true;
+          });
+
+          pill.style.left = `${left}px`;
+          pill.style.top = `${top}px`;
+          if (!moved) break;
+        }
+      };
+
       const releasePill = () => {
+        settleWithoutHidingLabels();
         pill.classList.remove("is-dragging");
         pill.removeEventListener("pointermove", movePill);
         pill.removeEventListener("pointerup", releasePill);
