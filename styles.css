@@ -25,21 +25,23 @@ img { display: block; max-width: 100%; }
 .skip-link:focus { top: 1rem; }
 
 .site-header {
-  position: sticky; top: 1rem; z-index: 8; display: grid;
-  grid-template-columns: 3.8rem auto 3.8rem; justify-content: center; align-items: center; gap: .65rem;
+  position: sticky; top: 1rem; z-index: 8; display: flex;
+  justify-content: center; align-items: center; gap: .75rem;
   width: max-content; margin: 1rem auto 0; padding: 0;
   background: transparent; backdrop-filter: none;
   transition: box-shadow .3s ease, background .3s ease, transform .3s ease;
 }
 .site-header.is-scrolled { transform: translateY(-.2rem); }
-.wordmark, .header-contact {
-  display: grid; place-items: center; width: 3.8rem; height: 3.8rem;
+.header-contact {
+  display: grid; place-items: center; width: 4.2rem; height: 4.2rem;
   border: 1px solid var(--line); border-radius: 50%; background: rgba(255,255,255,.78);
   font-weight: 600; text-decoration: none; backdrop-filter: blur(18px);
 }
-.header-contact { background: #ffc916; font-size: 1.15rem; }
-nav { display: flex; gap: .15rem; padding: .35rem; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.78); backdrop-filter: blur(18px); }
-nav a { padding: .55rem .8rem; border-radius: 999px; transition: background .25s ease; }
+.header-contact { background: #ffc916; }
+.header-contact svg { width: 1.65rem; height: 1.65rem; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+nav { display: flex; gap: .25rem; padding: .55rem .7rem; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.78); backdrop-filter: blur(18px); }
+nav a { display: flex; align-items: center; gap: .62rem; padding: .65rem .9rem; border-radius: 999px; font-size: 1.05rem; transition: background .25s ease; }
+nav a svg { width: 1.45rem; height: 1.45rem; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 nav a:hover, nav a:focus-visible { background: rgba(21,22,21,.07); }
 nav a, .text-link { position: relative; text-decoration: none; }
 nav a::after, .text-link::after {
@@ -198,12 +200,13 @@ footer p { margin: 0; } footer p:nth-child(2) { text-align: center; } footer p:l
 }
 
 @media (max-width: 760px) {
-  .site-header { top: .5rem; grid-template-columns: 3.15rem auto 3.15rem; gap: .35rem; margin-top: .5rem; }
-  .wordmark, .header-contact { width: 3.15rem; height: 3.15rem; }
+  .site-header { top: .5rem; gap: .35rem; width: calc(100% - 1rem); margin-top: .5rem; }
+  .header-contact { width: 3.15rem; height: 3.15rem; flex: 0 0 3.15rem; }
+  .header-contact svg { width: 1.3rem; height: 1.3rem; }
   main, footer { padding-left: 1rem; padding-right: 1rem; }
-  nav { font-size: .82rem; }
-  nav a { padding: .45rem .5rem; }
-  nav a:nth-child(2) { display: none; }
+  nav { flex: 1; justify-content: space-around; min-width: 0; padding: .35rem; }
+  nav a { gap: 0; padding: .5rem; font-size: 0; }
+  nav a svg { width: 1.3rem; height: 1.3rem; }
   .hero { min-height: calc(100svh - 4.5rem); padding-top: 1rem; }
   .hero-center { margin-top: -6rem; }
   .hero-center h1 { font-size: clamp(3rem, 14vw, 4.3rem); }
