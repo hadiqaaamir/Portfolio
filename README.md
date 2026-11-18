@@ -1,4 +1,4 @@
-# Hadiqa Aamir — Portfolio
+# Hadiqa Aamir | Portfolio
 
 Independent portfolio website for Hadiqa Aamir, a Toronto-based product designer working across AI-enabled healthcare products, visual communication, and design-to-development.
 

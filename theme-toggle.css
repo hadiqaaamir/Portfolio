@@ -1,0 +1,159 @@
+/* Homepage theme boundary and appearance switcher. Kept separate so the
+   interaction can be cached independently from the main portfolio CSS. */
+html:not([data-theme="light"]),
+html:not([data-theme="light"]) body.home-page {
+  margin: 0;
+  background: #111111;
+}
+
+html[data-theme="light"],
+html[data-theme="light"] body.home-page {
+  margin: 0;
+  background: #f4f2ec;
+}
+.home-page {
+  --ink: #f4f2ec;
+  --paper: #111111;
+  --line: rgba(244, 242, 236, .18);
+  --muted: #a8a8a3;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.home-page main,
+.home-page .hero,
+.home-page .tools-strip,
+.home-page .work,
+.home-page .visual-practice,
+.home-page .about { background-color: var(--paper); }
+
+.home-page .site-header {
+  display: flex;
+  position: sticky;
+  top: 1rem;
+  gap: .55rem;
+  isolation: isolate;
+}
+
+.home-page .wordmark,
+.home-page .header-contact,
+.home-page .theme-toggle {
+  display: grid;
+  place-items: center;
+  width: 3.8rem;
+  height: 3.8rem;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--ink);
+  background: rgba(24,24,24,.88);
+  font: inherit;
+  text-decoration: none;
+  backdrop-filter: blur(18px);
+}
+
+.home-page .header-contact { color: #111111; background: #ffc916; }
+.home-page .wordmark {
+  color: #f4f2ec;
+  border-color: rgba(255,255,255,.18);
+  background: rgba(255,255,255,.1);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.16), 0 10px 32px rgba(0,0,0,.18);
+  -webkit-backdrop-filter: blur(22px) saturate(150%);
+  backdrop-filter: blur(22px) saturate(150%);
+}
+.home-page .header-contact { background: #ffd016; border-color: #d5d3cc; }
+.home-page nav {
+  color: #f4f2ec;
+  border-color: rgba(255,255,255,.18);
+  background: rgba(255,255,255,.1);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.16), 0 14px 40px rgba(0,0,0,.2);
+  -webkit-backdrop-filter: blur(22px) saturate(150%);
+  backdrop-filter: blur(22px) saturate(150%);
+}
+.home-page nav a[aria-current="page"] {
+  color: #151615;
+  background: rgba(255,255,255,.92);
+  box-shadow: 0 2px 10px rgba(0,0,0,.1);
+}
+.home-page nav a:hover,
+.home-page nav a:focus-visible { background: rgba(255,255,255,.18); }
+.home-page .hero-pill { color: #151615; }
+.home-page .theme-toggle { cursor: pointer; transition: transform .25s ease, background .25s ease; }
+.home-page .theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 6.25rem;
+  height: 3.8rem;
+  padding: .32rem;
+  border-radius: 999px;
+  color: #f4f2ec;
+  background: #16212c;
+}
+.home-page .theme-toggle:hover,
+.home-page .theme-toggle:focus-visible { transform: rotate(8deg) scale(1.04); }
+.home-page .theme-icon {
+  display: block;
+  width: 3.05rem;
+  height: 3.05rem;
+  padding: .78rem;
+  box-sizing: border-box;
+  border-radius: 50%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: color .25s ease, background .25s ease;
+}
+.home-page .theme-icon-sun { color: #d3a21d; }
+.home-page .theme-icon-moon { color: #16212c; background: #fff; }
+
+html[data-theme="light"] { color-scheme: light; }
+html:not([data-theme="light"]) { color-scheme: dark; }
+html[data-theme="light"] .home-page {
+  --ink: #151615;
+  --paper: #f4f2ec;
+  --line: rgba(21,22,21,.16);
+  --muted: #666660;
+}
+html[data-theme="light"] .home-page .wordmark,
+html[data-theme="light"] .home-page nav {
+  color: #151615;
+  border-color: rgba(255,255,255,.72);
+  background: rgba(255,255,255,.54);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 14px 40px rgba(47,37,82,.12);
+}
+html[data-theme="light"] .home-page .wordmark {
+  color: #151615;
+  border-color: rgba(255,255,255,.72);
+  background: rgba(255,255,255,.58);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 10px 28px rgba(47,37,82,.1);
+}
+html[data-theme="light"] .home-page .theme-toggle { background: #16212c; }
+html[data-theme="light"] .home-page nav { color: #151615; }
+html[data-theme="light"] .home-page nav a:hover,
+html[data-theme="light"] .home-page nav a:focus-visible { background: rgba(17,17,17,.07); }
+html[data-theme="light"] .home-page nav a[aria-current="page"] {
+  background: rgba(255,255,255,.94);
+  box-shadow: 0 2px 12px rgba(47,37,82,.12);
+}
+html[data-theme="light"] .home-page .theme-icon-sun { color: #c58f00; background: #fff; }
+html[data-theme="light"] .home-page .theme-icon-moon { color: #f4f2ec; background: transparent; }
+html[data-theme="light"] .home-page .creative-index a,
+html[data-theme="light"] .home-page .platform-intro { color: #151615; background: #fffefa; }
+html[data-theme="light"] .home-page .pill-description { color: #151615; background: #fffefa; }
+
+@media (max-width: 760px) {
+  .home-page .site-header { display: flex; gap: .35rem; }
+  .home-page .wordmark,
+  .home-page .header-contact,
+  .home-page .theme-toggle { width: 3.15rem; height: 3.15rem; }
+  .home-page .theme-toggle { top: .5rem; right: .5rem; }
+  .home-page .theme-toggle { width: 5.15rem; height: 3.15rem; padding: .26rem; }
+  .home-page .theme-icon { width: 2.58rem; height: 2.58rem; padding: .68rem; }
+}
