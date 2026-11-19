@@ -255,6 +255,13 @@
   object-fit: cover;
   object-position: center 48%;
 }
+.aba-care-case .graphs-reports-photo img {
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+}
 .aba-care-case .iteration-section { padding: 5rem 0; }
 .aba-care-case .iteration-image-placeholder { min-height: 330px; }
 .aba-care-case .iteration-learnings { margin-top: 3rem; }
