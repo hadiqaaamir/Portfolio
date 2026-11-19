@@ -262,6 +262,17 @@
   object-fit: cover;
   object-position: center;
 }
+.aba-care-case .progress-screen-stack { display: grid; gap: 3rem; }
+.aba-care-case .progress-screen-stack figure { margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 1rem; background: #fff; }
+.aba-care-case .progress-screen-stack img { display: block; width: 100%; height: auto; }
+.aba-care-case .progress-screen-stack figcaption { display: grid; grid-template-columns: minmax(160px, .4fr) minmax(0, 1fr); gap: 1.5rem; padding: 1.3rem 1.5rem; border-top: 1px solid var(--line); background: #141514; }
+.aba-care-case .progress-screen-stack figcaption strong { color: #f3f2ed; font-weight: 500; }
+.aba-care-case .progress-screen-stack figcaption span { color: var(--muted); line-height: 1.55; }
+.aba-care-case .implementation-sitemap { grid-column: 1 / -1; margin: 4rem 0 0; overflow: hidden; border: 1px solid var(--line); border-radius: 1rem; background: #f7f5fb; }
+.aba-care-case .implementation-sitemap img { display: block; width: 100%; height: auto; }
+.aba-care-case .implementation-sitemap figcaption { display: grid; grid-template-columns: minmax(180px, .4fr) minmax(0, 1fr); gap: 1.5rem; padding: 1.3rem 1.5rem; border-top: 1px solid var(--line); background: #141514; }
+.aba-care-case .implementation-sitemap figcaption strong { color: #f3f2ed; font-weight: 500; }
+.aba-care-case .implementation-sitemap figcaption span { color: var(--muted); line-height: 1.55; }
 .aba-care-case .iteration-section { padding: 5rem 0; }
 .aba-care-case .iteration-image-placeholder { min-height: 330px; }
 .aba-care-case .iteration-learnings { margin-top: 3rem; }
@@ -616,6 +627,10 @@
   .case-image-placeholder-wide > div { min-height: 330px; padding: 1.25rem; }
   .aba-care-case .case-evidence-photo img { min-height: 330px; }
   .aba-care-case .discovery-whiteboard-photo img { height: 300px; min-height: 300px; }
+  .aba-care-case .progress-screen-stack { gap: 2rem; }
+  .aba-care-case .progress-screen-stack figcaption { grid-template-columns: 1fr; gap: .5rem; padding: 1rem; }
+  .aba-care-case .implementation-sitemap { margin-top: 2.5rem; }
+  .aba-care-case .implementation-sitemap figcaption { grid-template-columns: 1fr; gap: .5rem; padding: 1rem; }
   .workflow-map { grid-template-columns: 1fr; }
   .workflow-map > b { transform: rotate(90deg); justify-self: center; }
   .marketing-sitemap { padding:1rem; }
