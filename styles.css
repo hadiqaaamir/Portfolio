@@ -316,6 +316,8 @@ h1 span { color: var(--blue); }
 .marketing-studio-preview { background: linear-gradient(135deg, #b8cdec 0%, #5077c8 100%); }
 .marketing-studio-cover { background:#2367c3; }
 .marketing-studio-cover img { width:100%; height:100%; object-fit:cover; object-position:center; }
+.code-creatives-cover { background: #fff; }
+.code-creatives-cover img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 .marketing-studio-animation {
   --studio-frame-inset: 4%;
   position: absolute; inset: 0; overflow: hidden;
