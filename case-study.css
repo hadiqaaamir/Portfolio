@@ -181,8 +181,14 @@
   line-height: 1.55;
   font-weight: 400;
 }
-.aba-care-case .case-kicker { letter-spacing: .12em; text-transform: uppercase; }
+.aba-care-case .case-kicker {
+  display: block;
+  letter-spacing: .12em;
+  text-align: left;
+  text-transform: uppercase;
+}
 .aba-care-case .case-kicker p { font-size: .76rem; }
+.aba-care-case .case-kicker p + p { margin-top: .75rem; }
 .aba-care-case .case-section {
   display: block;
   grid-template-columns: none;
@@ -197,8 +203,26 @@
   line-height: 1.08;
 }
 .aba-care-case .case-section > div > p { max-width: 760px; margin-top: 1.4rem; font-size: 1.02rem; line-height: 1.62; }
-.aba-care-case .case-section-heading { width: min(100%, 1080px); }
-.aba-care-case .case-section-heading > p:last-child { max-width: 760px; font-size: 1rem; line-height: 1.62; }
+.aba-care-case .case-section-heading {
+  display: block;
+  width: min(100%, 1080px);
+  text-align: left;
+}
+.aba-care-case .case-section-heading > * {
+  margin-left: 0;
+  text-align: left;
+}
+.aba-care-case .case-section-heading h2 { margin-top: 1.25rem; }
+.aba-care-case .case-section-heading > p:last-child { max-width: 760px; margin-top: 1.4rem; font-size: 1rem; line-height: 1.62; }
+.aba-care-case .case-facts,
+.aba-care-case .case-section,
+.aba-care-case .flow-section,
+.aba-care-case .case-evidence,
+.aba-care-case .iteration-section,
+.aba-care-case .case-outcome,
+.aba-care-case .case-next,
+.aba-care-case figcaption { text-align: left; }
+.aba-care-case .product-shot figcaption small { text-align: left; }
 .aba-care-case .case-outcome > p:last-child {
   width: min(100%, 760px);
   margin-left: 0;
