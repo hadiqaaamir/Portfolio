@@ -58,10 +58,18 @@
 .case-study-page .hypothesis-loop article,
 .case-study-page .prototype-loop article,
 .case-study-page .module-grid a { background: #fffefa; }
+.case-study-page .module-grid a,
+.aba-care-case .module-grid a { color: #171817; }
+.case-study-page .module-grid a p,
+.aba-care-case .module-grid a p { color: #676762; }
+.case-study-page .module-grid a b,
+.aba-care-case .module-grid a b { color: #171817; }
 .case-study-page .module-grid a:hover,
 .case-study-page .module-grid a:focus-visible { color: #f4f2ec; background: #1a1a1a; }
 .case-study-page .module-grid a:hover p,
 .case-study-page .module-grid a:focus-visible p { color: #b9b8b2; }
+.case-study-page .module-grid a:hover b,
+.case-study-page .module-grid a:focus-visible b { color: #f4f2ec; }
 .case-study-page footer { border-color: var(--line); background: #111111; color: #f4f2ec; }
 
 /* Keep the CliniScripts story on the same clean white used by its hero image. */
