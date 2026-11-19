@@ -171,6 +171,54 @@ h1 span { color: var(--blue); }
 @keyframes tools-loop { to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) { .tools-track { animation: none; } }
 
+/* Playground */
+.playground-main { width: min(100%, 1440px); margin-inline: auto; padding: 0 clamp(1.25rem, 3vw, 3rem); }
+.playground-hero { min-height: 78vh; padding: clamp(8rem, 16vh, 13rem) 0 5rem; border-bottom: 1px solid var(--line); }
+.playground-hero h1 { max-width: 1180px; font-size: clamp(3.4rem, 7.5vw, 7.8rem); line-height: .94; }
+.playground-hero h1 em { color: #ffd316; font-style: normal; }
+.playground-intro { display: grid; grid-template-columns: minmax(0, 2fr) 1fr; gap: 3rem; align-items: end; margin-top: 4rem; }
+.playground-intro p { max-width: 700px; margin: 0; color: var(--muted); font-size: clamp(1.05rem, 1.5vw, 1.3rem); line-height: 1.55; }
+.playground-intro span { justify-self: end; color: var(--muted); line-height: 1.7; }
+.playground-feature { padding: 5rem 0; border-bottom: 1px solid var(--line); }
+.playground-feature a { position: relative; display: block; min-height: 620px; overflow: hidden; border-radius: 1.4rem; text-decoration: none; }
+.playground-feature img { width: 100%; height: 100%; min-height: 620px; object-fit: cover; transition: transform .6s cubic-bezier(.2,.75,.2,1); }
+.playground-feature a:hover img { transform: scale(1.018); }
+.playground-feature a::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10,10,10,.74), rgba(10,10,10,.1) 65%); }
+.playground-feature div { position: absolute; z-index: 1; left: clamp(1.5rem, 4vw, 4rem); bottom: clamp(1.5rem, 4vw, 4rem); max-width: 620px; }
+.playground-feature p { margin: 0 0 1rem; color: #d5d4cf; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; }
+.playground-feature h2 { font-size: clamp(2.4rem, 5vw, 5.4rem); font-weight: 500; line-height: .98; }
+.playground-feature span { display: inline-block; margin-top: 1.5rem; font-weight: 600; }
+.playground-section { padding: 7rem 0; border-bottom: 1px solid var(--line); }
+.playground-heading { display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; margin-bottom: 4rem; }
+.playground-heading h2 { font-size: clamp(2.5rem, 5vw, 5.2rem); font-weight: 500; line-height: 1; }
+.behance-list { border-top: 1px solid var(--line); }
+.behance-list a { display: grid; grid-template-columns: .8fr 2fr auto; gap: 2rem; align-items: center; padding: 2.1rem .25rem; border-bottom: 1px solid var(--line); text-decoration: none; transition: padding .25s ease, background .25s ease; }
+.behance-list a:hover { padding-inline: 1.25rem; background: rgba(255,255,255,.04); }
+.behance-list span { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }
+.behance-list strong { font: 500 clamp(1.35rem, 2.4vw, 2.5rem) "Manrope", sans-serif; }
+.behance-list b { font-size: .78rem; font-weight: 600; }
+.art-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; align-items: start; }
+.art-grid figure { margin: 0; overflow: hidden; border-radius: 1rem; background: #1a1a1a; }
+.art-grid img { width: 100%; height: clamp(420px, 55vw, 760px); object-fit: cover; }
+.art-grid .art-wide img { height: clamp(320px, 34vw, 520px); }
+.art-grid figcaption { padding: 1rem 1.1rem 1.2rem; color: var(--muted); font-size: .85rem; }
+.playground-archive { display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; padding: 7rem 0; }
+.playground-archive h2 { font-size: clamp(2.6rem, 5vw, 5.2rem); font-weight: 500; }
+.playground-archive p { max-width: 660px; color: var(--muted); line-height: 1.65; }
+.playground-archive nav { width: max-content; margin-top: 2rem; }
+
+@media (max-width: 780px) {
+  .playground-hero { min-height: auto; padding-top: 8rem; }
+  .playground-intro, .playground-heading, .playground-archive { grid-template-columns: 1fr; }
+  .playground-intro span { justify-self: start; }
+  .playground-feature a, .playground-feature img { min-height: 520px; }
+  .behance-list a { grid-template-columns: 1fr auto; gap: .6rem 1rem; }
+  .behance-list span { grid-column: 1 / -1; }
+  .behance-list b { text-align: right; }
+  .art-grid { grid-template-columns: 1fr; }
+  .art-grid img, .art-grid .art-wide img { height: auto; max-height: 680px; }
+}
+
 .work, .visual-practice, .about { border-top: 1px solid var(--line); padding: 6rem 0; }
 .section-heading { display: grid; grid-template-columns: 1fr 2fr; margin-bottom: 3rem; }
 .section-heading h2, .visual-copy h2, .about h2 { font-size: clamp(2.25rem, 4.4vw, 4.7rem); font-weight: 500; line-height: 1.04; letter-spacing: -.045em; }
