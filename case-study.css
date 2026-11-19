@@ -484,7 +484,8 @@
 
 /* Marketing Studio */
 .marketing-studio-case { --studio-blue:#3552b0; --studio-ink:#17243a; --studio-canvas:#dfe8f7; }
-.marketing-studio-case .marketing-case-cover { width:min(100%,1040px); margin-inline:auto; padding:clamp(.75rem,1.5vw,1.25rem); background:linear-gradient(135deg,#b8cdec 0%,#5077c8 100%); }
+.marketing-studio-case .marketing-case-cover { width:min(100%,1040px); margin-inline:auto; padding:0; border:0; background:transparent; }
+.marketing-studio-case .marketing-case-cover .visual-note { margin:1rem 0 0; padding:0; }
 .marketing-studio-case .marketing-cover-image { display:block; width:100%; height:auto; border-radius:1rem; box-shadow:0 28px 70px rgba(31,55,112,.25); }
 .marketing-studio-animation-large { --studio-frame-inset:3%; position:relative; inset:auto; width:100%; height:min(58vw,610px); aspect-ratio:auto; overflow:hidden; border-radius:1rem; box-shadow:0 28px 70px rgba(31,55,112,.25); }
 .marketing-studio-case .marketing-screen { width:min(100%,1040px); margin:0 auto; overflow:hidden; border:1px solid var(--line); border-radius:1rem; background:#141514; box-shadow:none; }
