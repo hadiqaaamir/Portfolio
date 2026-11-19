@@ -455,6 +455,11 @@
   -webkit-text-fill-color: transparent;
 }
 .aba-care-case .cs-platform-hero .case-intro { color: #b3b4af; }
+.cliniscripts-case .cs-platform-hero{display:grid;min-height:auto;margin-inline:0;padding:clamp(6rem,10vh,8rem) 0 0;overflow:visible;background:#0d0e0d}
+.cliniscripts-case .cs-platform-hero-copy{order:1;width:100%;min-height:auto;padding:0 0 clamp(3rem,6vw,5rem)}
+.cliniscripts-case .cs-platform-hero-image{position:relative;inset:auto;order:2;display:block;width:100%;height:auto;max-height:none;object-fit:contain;object-position:top;border-radius:1.25rem}
+.cliniscripts-case .cs-platform-hero h1{max-width:1050px;font-size:clamp(3.6rem,6vw,6.8rem)}
+.cliniscripts-case .cs-platform-hero .case-intro{width:min(720px,100%)}
 
 .case-cover { margin: 0 0 1rem; padding: 7vw 7vw 0; overflow: hidden; background: #b9cee5; }
 .product-shot { padding: clamp(1rem, 2.5vw, 2.75rem); background: linear-gradient(145deg, #20164b, #7862c8); }
@@ -604,6 +609,12 @@
 .cliniscripts-case .evidence-grid article{background:#151615;color:#f4f4f0}
 .cliniscripts-case .evidence-grid strong{color:#f4f4f0}
 .cliniscripts-case .evidence-grid span{color:#b9bbb5}
+.cliniscripts-screen-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:3.5rem}
+.cliniscripts-screen-grid figure{margin:0;overflow:hidden;border:1px solid rgba(244,243,239,.18);border-radius:1rem;background:#141514}
+.cliniscripts-screen-grid img{display:block;width:100%;aspect-ratio:16/10;object-fit:contain;object-position:top;background:#ececf2}
+.cliniscripts-screen-grid figcaption{display:grid;gap:.45rem;padding:1.15rem 1.25rem;border-top:1px solid rgba(244,243,239,.14)}
+.cliniscripts-screen-grid figcaption strong{color:#f4f3ef;font-weight:500}
+.cliniscripts-screen-grid figcaption span{color:#b8b8b2;line-height:1.55}
 
 /* Designing from behaviour */
 .analytics-cover { background: #d6d9ff; }
@@ -707,7 +718,7 @@
   .analytics-panels { grid-template-columns: 1fr; }
   .signal-grid, .hypothesis-loop { grid-template-columns: 1fr; }
   .build-stage-body{grid-template-columns:1fr;min-height:auto}.build-stage-body aside{display:none}.build-canvas{padding:2rem 1rem}.build-demo-row,.prototype-loop{grid-template-columns:1fr}.build-demo-row article{min-height:160px}.build-demo-row strong{margin-top:2rem}
-  .cs-app-shell{grid-template-columns:1fr;min-height:auto}.cs-sidebar{display:none}.cs-workspace{padding:1rem}.cs-tabs{overflow-x:auto}.cs-summary-grid,.challenge-row,.capture-board,.context-cards,.admin-stats,.evidence-grid,.module-grid,.cliniscripts-case .module-grid{grid-template-columns:1fr}.module-grid a{min-height:250px}.capture-board article{min-height:190px}.capture-board span{margin-top:4rem}.decision-flow{display:grid;grid-template-columns:1fr}.decision-flow b{transform:rotate(90deg);justify-self:center}.context-visual{grid-template-columns:1fr}.context-nav{display:none}.context-main{padding:1rem}.match-layout{grid-template-columns:1fr}.admin-table>div{grid-template-columns:1.4fr .7fr .7fr}.admin-table>div>*:last-child{display:none}
+  .cs-app-shell{grid-template-columns:1fr;min-height:auto}.cs-sidebar{display:none}.cs-workspace{padding:1rem}.cs-tabs{overflow-x:auto}.cs-summary-grid,.challenge-row,.capture-board,.context-cards,.admin-stats,.evidence-grid,.module-grid,.cliniscripts-case .module-grid,.cliniscripts-screen-grid{grid-template-columns:1fr}.module-grid a{min-height:250px}.capture-board article{min-height:190px}.capture-board span{margin-top:4rem}.decision-flow{display:grid;grid-template-columns:1fr}.decision-flow b{transform:rotate(90deg);justify-self:center}.context-visual{grid-template-columns:1fr}.context-nav{display:none}.context-main{padding:1rem}.match-layout{grid-template-columns:1fr}.admin-table>div{grid-template-columns:1.4fr .7fr .7fr}.admin-table>div>*:last-child{display:none}
   .scribe-screen-story{padding:4rem 0}.scribe-screen-stack{gap:2rem;margin-top:2.5rem}.scribe-screen-stack figcaption{grid-template-columns:1fr;gap:.5rem;padding:1rem}
   .banking-case-screen-grid { grid-template-columns: 1fr; }
   .banking-case-screen-grid img { height: auto; max-height: 680px; padding: 1rem; }
