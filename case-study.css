@@ -365,6 +365,20 @@
   font-size: clamp(1.05rem, 1.45vw, 1.4rem);
   line-height: 1.65;
 }
+.aba-care-case .cs-platform-hero {
+  color: #f4f3ef;
+  background: #080908;
+}
+.aba-care-case .cs-platform-hero .eyebrow { color: #a8aaa5; }
+.aba-care-case .cs-platform-hero h1 { color: #f4f3ef; }
+.aba-care-case .cs-platform-hero h1 span {
+  color: #b79cff;
+  background: linear-gradient(100deg, #f4f3ef 2%, #9d73ff 94%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.aba-care-case .cs-platform-hero .case-intro { color: #b3b4af; }
 
 .case-cover { margin: 0 0 1rem; padding: 7vw 7vw 0; overflow: hidden; background: #b9cee5; }
 .product-shot { padding: clamp(1rem, 2.5vw, 2.75rem); background: linear-gradient(145deg, #20164b, #7862c8); }
@@ -534,7 +548,7 @@
   .aba-care-case .case-hero { min-height: 64vh; }
   .aba-care-case .case-hero h1 { font-size: clamp(2.65rem, 12vw, 4rem); }
   .aba-care-case .case-kicker { gap: .75rem; }
-  .case-study-page .cs-platform-hero { display: flex; flex-direction: column; min-height: auto; padding-top: 5.5rem; background: #f8f8f6; }
+  .case-study-page .cs-platform-hero { display: flex; flex-direction: column; min-height: auto; padding-top: 5.5rem; background: #080908; }
   .cs-platform-hero-image { position: relative; display: block; height: auto; min-height: 0; object-fit: contain; order: 2; }
   .cs-platform-hero-copy { order: 1; width: 100%; min-height: auto; padding: 3rem 1rem 1rem; }
   .case-study-page .cs-platform-hero .eyebrow { margin-bottom: 2rem; }
