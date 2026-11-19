@@ -8,6 +8,20 @@ window.addEventListener(
 
 document.documentElement.classList.add("motion-ready");
 
+const cliniscriptsCoverVideo = document.querySelector(".cliniscripts-cover-video");
+const playCliniscriptsCover = () => {
+  if (!cliniscriptsCoverVideo) return;
+  cliniscriptsCoverVideo.muted = true;
+  cliniscriptsCoverVideo.play().catch(() => {
+    // The poster remains available if a browser temporarily blocks autoplay.
+  });
+};
+
+window.addEventListener("pageshow", playCliniscriptsCover);
+document.addEventListener("visibilitychange", () => {
+  if (!document.hidden) playCliniscriptsCover();
+});
+
 const replayHeroPills = () => {
   if (!document.querySelector(".hero-pill")) return;
   document.querySelectorAll(".hero-pill").forEach((pill) => {
