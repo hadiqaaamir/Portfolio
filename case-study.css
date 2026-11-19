@@ -609,9 +609,9 @@
 .cliniscripts-case .evidence-grid article{background:#151615;color:#f4f4f0}
 .cliniscripts-case .evidence-grid strong{color:#f4f4f0}
 .cliniscripts-case .evidence-grid span{color:#b9bbb5}
-.cliniscripts-screen-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:3.5rem}
+.cliniscripts-screen-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:1rem;margin-top:3.5rem}
 .cliniscripts-screen-grid figure{margin:0;overflow:hidden;border:1px solid rgba(244,243,239,.18);border-radius:1rem;background:#141514}
-.cliniscripts-screen-grid img{display:block;width:100%;aspect-ratio:16/10;object-fit:contain;object-position:top;background:#ececf2}
+.cliniscripts-screen-grid img{display:block;width:100%;height:auto;background:#ececf2}
 .cliniscripts-screen-grid figcaption{display:grid;gap:.45rem;padding:1.15rem 1.25rem;border-top:1px solid rgba(244,243,239,.14)}
 .cliniscripts-screen-grid figcaption strong{color:#f4f3ef;font-weight:500}
 .cliniscripts-screen-grid figcaption span{color:#b8b8b2;line-height:1.55}
