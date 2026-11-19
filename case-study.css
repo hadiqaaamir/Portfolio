@@ -491,6 +491,20 @@
 .marketing-studio-case .marketing-screen { width:min(100%,1040px); margin:0 auto; overflow:hidden; border:1px solid var(--line); border-radius:1rem; background:#141514; box-shadow:none; }
 .marketing-studio-case .marketing-screen img { display:block; width:100%; height:auto; aspect-ratio:8 / 5; object-fit:contain; object-position:top center; }
 .marketing-flow .case-section-heading>p:last-child { max-width:760px; color:var(--muted); font-size:1rem; line-height:1.62; }
+.marketing-sitemap-section .case-section-heading>p:last-child { max-width:760px; color:var(--muted); font-size:1rem; line-height:1.62; }
+.marketing-sitemap { padding:2rem; border:1px solid rgba(244,243,239,.22); border-radius:1rem; background:#141514; }
+.marketing-sitemap article { border:1px solid rgba(244,243,239,.2); border-radius:.8rem; background:#191a19; }
+.marketing-sitemap article>span { display:block; margin-bottom:1.5rem; color:#79a9ff; font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; }
+.marketing-sitemap article>strong { display:block; font:600 1.15rem "Manrope",sans-serif; letter-spacing:-.02em; }
+.marketing-sitemap article>p { margin:.65rem 0 0; color:var(--muted); line-height:1.5; }
+.marketing-sitemap .sitemap-root { width:min(100%,360px); margin:0 auto 3rem; padding:1.35rem 1.5rem; background:#3159ba; color:#fff; }
+.marketing-sitemap .sitemap-root>span,.marketing-sitemap .sitemap-root>p { color:rgba(255,255,255,.76); }
+.sitemap-branches { position:relative; display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:.8rem; }
+.sitemap-branches::before { content:""; position:absolute; top:-1.5rem; left:10%; right:10%; height:1px; background:rgba(121,169,255,.6); }
+.sitemap-branches article { position:relative; min-height:260px; padding:1.25rem; }
+.sitemap-branches article::before { content:""; position:absolute; top:-1.5rem; left:50%; width:1px; height:1.5rem; background:rgba(121,169,255,.6); }
+.sitemap-branches ul { display:grid; gap:.65rem; margin:1.5rem 0 0; padding:0; list-style:none; }
+.sitemap-branches li { padding-top:.65rem; border-top:1px solid rgba(244,243,239,.12); color:var(--muted); font-size:.82rem; line-height:1.35; }
 .marketing-studio-case .execution-outcome .evidence-grid { border-color:#cbd3df; background:#cbd3df; }
 .marketing-studio-case .execution-outcome .evidence-grid article { background:#f7f9fc; color:var(--studio-ink); }
 .marketing-studio-case .execution-outcome .evidence-grid strong { color:var(--studio-ink); }
@@ -604,6 +618,11 @@
   .aba-care-case .discovery-whiteboard-photo img { height: 300px; min-height: 300px; }
   .workflow-map { grid-template-columns: 1fr; }
   .workflow-map > b { transform: rotate(90deg); justify-self: center; }
+  .marketing-sitemap { padding:1rem; }
+  .marketing-sitemap .sitemap-root { margin-bottom:1rem; }
+  .sitemap-branches { grid-template-columns:1fr; }
+  .sitemap-branches::before,.sitemap-branches article::before { display:none; }
+  .sitemap-branches article { min-height:0; }
   .analytics-dashboard-body { grid-template-columns: 1fr; }
   .analytics-nav { display: none; }
   .analytics-content { padding: 1rem; }
