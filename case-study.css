@@ -487,7 +487,7 @@
 .marketing-studio-case .marketing-case-cover { width:min(100%,1040px); margin-inline:auto; padding:clamp(.75rem,1.5vw,1.25rem); background:linear-gradient(135deg,#b8cdec 0%,#5077c8 100%); }
 .marketing-studio-animation-large { --studio-frame-inset:3%; position:relative; inset:auto; width:100%; height:min(58vw,610px); aspect-ratio:auto; overflow:hidden; border-radius:1rem; box-shadow:0 28px 70px rgba(31,55,112,.25); }
 .marketing-studio-case .marketing-screen { width:min(100%,1040px); margin:0 auto; overflow:hidden; border:1px solid var(--line); border-radius:1rem; background:#141514; box-shadow:none; }
-.marketing-studio-case .marketing-screen img { display:block; width:100%; height:min(52vw,620px); object-fit:cover; object-position:top center; }
+.marketing-studio-case .marketing-screen img { display:block; width:100%; height:auto; aspect-ratio:8 / 5; object-fit:contain; object-position:top center; }
 .marketing-flow .case-section-heading>p:last-child { max-width:760px; color:var(--muted); font-size:1rem; line-height:1.62; }
 
 /* CliniScripts: portfolio-safe interface reconstructions */
